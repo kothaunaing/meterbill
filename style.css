@@ -1,6 +1,8 @@
 body {
   font-family: system-ui;
   background-color: hsla(293, 94%, 58%, 0.048);
+  padding: 15px;
+  font-size: 1em;
 }
 
 .container {
@@ -21,7 +23,7 @@ body {
 .title {
   text-align: center;
   color: rgb(117, 0, 117);
-  font-size: 18px;
+  font-size: 1.2em;
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -50,7 +52,7 @@ body {
 .user-input::placeholder {
   font-family: system-ui;
   color: rgb(163, 163, 163);
-  font-size: 15px;
+  font-size: 1em;
 }
 
 .cal-button {
@@ -107,7 +109,7 @@ body {
   right: 10px;
   bottom: 5px;
   color: purple;
-  font-size: 14px;
+  font-size: 0.9em;
   font-weight: 600;
 }
 
@@ -116,7 +118,7 @@ body {
   left: 10px;
   top: 5px;
   color: purple;
-  font-size: 14px;
+  font-size: 0.9em;
   font-weight: 600;
   background-color: rgb(236, 236, 236);
   padding: 5px;
@@ -127,7 +129,7 @@ body {
   right: 5px;
   top: 0px;
   color: purple;
-  font-size: 14px;
+  font-size: 0.9em;
   font-weight: 600;
   padding: 5px;
 }
