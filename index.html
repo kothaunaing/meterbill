@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meter Bill Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Meter Bill Calculator</div>
+    <div class="box">
+      <div class="calculate-area">
+        <input type="number" min="0" class="user-input" placeholder="Enter the units used" onkeydown="
+          typing(event);
+          ">
+        <button class="cal-button" onclick="
+        calculateBill();
+        ">Calculate</button>
+      </div>
+     <!-- <div class="line"></div>--> 
+      <div class="result-area">
+        <div>You have used :</div>
+        <div class="unit-used">_____ units</div>
+        <div>Total cost :</div>
+        <div class="total-cost">_____ Kyats</div>
+      </div>
+    </div>
+    <div class="author">Author: Than Aung Naing</div>
+    <div class="typing">Hello 😊</div>
+    <div class="warning"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+body {
+  font-family: system-ui;
+  background-color: hsla(293, 94%, 58%, 0.048);
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 10px;
+  max-width: 600px;
+  border: 1px solid rgb(194, 194, 194);
+  box-shadow: 0 0 5px rgba(185, 185, 185, 0.575);
+  border-radius: 5px;
+  background-color: rgba(39, 250, 74, 0.048);
+  position: relative;
+}
+
+.title {
+  text-align: center;
+  color: rgb(117, 0, 117);
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.box {
+  padding: 10px 20px;
+  /* border: 1px solid rgb(214, 214, 214);*/
+}
+
+.calculate-area {
+  display: flex;
+  justify-content: center;
+  column-gap: 5px;
+}
+
+.user-input {
+  height: 33px;
+  border: 1px solid rgb(206, 206, 206);
+  padding-left: 7px;
+  border-radius: 3px;
+  outline-color: purple;
+  box-shadow: 0 0 5px rgba(185, 185, 185, 0.329);
+  flex: 1;
+}
+
+.user-input::placeholder {
+  font-family: system-ui;
+  color: rgb(163, 163, 163);
+  font-size: 15px;
+}
+
+.cal-button {
+  padding: 10px 15px;
+  border: none;
+  background-color: rgba(202, 39, 243, 0.459);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.clear {
+  padding: 10px 7px;
+  border: none;
+  background-color: rgba(202, 39, 243, 0.459);
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.cal-button:hover {
+  opacity: 0.85;
+}
+
+.cal-button:active {
+  opacity: 0.7;
+}
+
+.line {
+  height: 1px;
+  background-color: rgb(216, 216, 216);
+  margin: 15px 0;
+}
+
+.result-area {
+  border: 1px solid rgb(196, 196, 196);
+  padding: 15px 10px;
+  color: purple;
+  font-weight: 500;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  margin-top: 15px;
+}
+
+.author {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.typing {
+  position: absolute;
+  left: 10px;
+  top: 5px;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: rgb(236, 236, 236);
+  padding: 5px;
+}
+
+.warning {
+  position: absolute;
+  right: 5px;
+  top: 0px;
+  color: purple;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 5px;
+}
