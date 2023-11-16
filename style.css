@@ -1,6 +1,6 @@
 body {
   font-family: system-ui;
-  background-color: hsla(293, 94%, 58%, 0.048);
+  background: linear-gradient(90deg, rgb(153, 223, 255), rgba(116, 255, 169, 0.377));
   padding: 15px;
   font-size: 1em;
 }
@@ -13,10 +13,10 @@ body {
   margin-right: auto;
   padding: 20px 10px;
   max-width: 600px;
-  border: 1px solid rgb(194, 194, 194);
-  box-shadow: 0 0 5px rgba(185, 185, 185, 0.575);
+  border: 2px solid rgb(105, 105, 105);
+  box-shadow: 2px 2px 10px rgba(129, 129, 129, 0.575);
   border-radius: 5px;
-  background-color: rgba(39, 250, 74, 0.048);
+  background-color: rgba(255, 255, 255, 0.308);
   position: relative;
 }
 
@@ -37,34 +37,46 @@ body {
   display: flex;
   justify-content: center;
   column-gap: 5px;
+  align-items: center;
 }
 
 .user-input {
-  height: 33px;
+  height: 40px;
   border: 1px solid rgb(206, 206, 206);
   padding-left: 7px;
-  border-radius: 3px;
+  border-radius: 5px;
   outline-color: purple;
   box-shadow: 0 0 5px rgba(185, 185, 185, 0.329);
   flex: 1;
+  font-size: 1em;
 }
 
 .user-input::placeholder {
   font-family: system-ui;
   color: rgb(163, 163, 163);
-  font-size: 1em;
 }
 
 .cal-button {
-  padding: 10px 15px;
+  padding: 11px 15px;
   border: none;
   background-color: rgba(202, 39, 243, 0.459);
   color: rgb(255, 255, 255);
-  font-weight: 600;
+  font-weight: 550;
   border-radius: 3px;
   box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
   cursor: pointer;
   transition: opacity 0.15s;
+  font-size: 1em;
+  border: 1px solid rgba(80, 80, 80, 0);
+}
+
+.cal-button:hover {
+  opacity: 0.85;
+  border: 1px solid rgb(80, 80, 80);
+}
+
+.cal-button:active {
+  opacity: 0.7;
 }
 
 .clear {
@@ -77,14 +89,6 @@ body {
   box-shadow: 0 0 5px rgba(185, 185, 185, 0.5);
   cursor: pointer;
   transition: opacity 0.15s;
-}
-
-.cal-button:hover {
-  opacity: 0.85;
-}
-
-.cal-button:active {
-  opacity: 0.7;
 }
 
 .line {
@@ -100,7 +104,7 @@ body {
   font-weight: 500;
   border-radius: 3px;
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 120px 1fr;
   margin-top: 15px;
 }
 
@@ -111,17 +115,6 @@ body {
   color: purple;
   font-size: 0.9em;
   font-weight: 600;
-}
-
-.typing {
-  position: absolute;
-  left: 10px;
-  top: 5px;
-  color: purple;
-  font-size: 0.9em;
-  font-weight: 600;
-  background-color: rgb(236, 236, 236);
-  padding: 5px;
 }
 
 .warning {

@@ -5,24 +5,22 @@ if (usedUnit) document.querySelector('.user-input').value = `${usedUnit}`;
 displayResult(usedUnit, cost);
 
 function calculateBill() {
-  let typingElement = document.querySelector('.typing');
-
   const inputElement = document.querySelector('.user-input');
   usedUnit = Number(inputElement.value);
 
-  if (usedUnit) {
+  if (usedUnit > 0) {
     cost = 500 + calCost(usedUnit);
   }
-  else {
+  else if (usedUnit < 0) {
     usedUnit = 0;
     cost = 0;
     if (usedUnit !== 0) warning();
   }
+  else if (usedUnit === 0) {
+    cost = 0;
+  }
 
   displayResult(usedUnit, cost);
-  console.log(usedUnit);
-  console.log(cost);
-  typingElement.innerHTML = 'Hello 😀';
   saveStorage(usedUnit, cost);
 }
 
@@ -71,15 +69,19 @@ function displayResult(usedUnit, cost) {
   let unitElement = document.querySelector('.unit-used');
   let costElement = document.querySelector('.total-cost');
 
-  unitElement.innerHTML = `${usedUnit} ${unit}`;
-  costElement.innerHTML = `${cost} Kyats`;
+  if (usedUnit > 0) {
+    unitElement.innerHTML = `${usedUnit} ${unit}`;
+    costElement.innerHTML = `${cost} Kyats`;
+  }
+  else {
+    unitElement.innerHTML = `_____ units`;
+    costElement.innerHTML = `_____ Kyats`;
+  }
+
 }
 
 function typing(event) {
-  let typingElement = document.querySelector('.typing');
   let warnElement = document.querySelector('.warning');
-
-  typingElement.innerHTML = 'Typing . .';
   warnElement.innerHTML = '';
 
   if (event.key === 'Enter') {
